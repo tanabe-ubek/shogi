@@ -1,0 +1,2 @@
+language = "bash"
+run = "python3 抽選.py 入力サンプル.csv 出力サンプル.csv"
