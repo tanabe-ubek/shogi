@@ -173,7 +173,7 @@ if changed: #最終配置で移動があった→配置失敗
 else: #配置成功
     print(f'{trial-1}回目で条件を満たす選手配置に成功しました。{out_file}に出力します。')
     with open(out_file, 'w', encoding="utf_8_sig") as csvfile:
-        spamwriter = csv.writer(csvfile, delimiter='\t', quoting=csv.QUOTE_MINIMAL)
+        spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_MINIMAL)
         for (player, position) in zip(players, positions):
             spamwriter.writerow(player + position)
 print('抽選を終了します')
