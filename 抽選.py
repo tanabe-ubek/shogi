@@ -172,7 +172,7 @@ if changed: #最終配置で移動があった→配置失敗
     print(f'{max_trial}回の試行をしましたが、配置に失敗しました。プログラムを再度起動し、新しいランダム配置で試行してください。')
 else: #配置成功
     print(f'{trial-1}回目で条件を満たす選手配置に成功しました。{out_file}に出力します。')
-    with open(out_file, 'w', encoding="utf_16") as csvfile:
+    with open(out_file, 'w', encoding="utf_8_sig") as csvfile:
         spamwriter = csv.writer(csvfile, delimiter='\t', quoting=csv.QUOTE_MINIMAL)
         for (player, position) in zip(players, positions):
             spamwriter.writerow(player + position)
